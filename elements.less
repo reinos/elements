@@ -25,6 +25,21 @@
                                    @start 0%,
                                    @stop 100%);
 }
+.horizontal-gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+	background: @color;
+	background-image: linear-gradient(right , @stop 0%, @start 100%);
+	background-image: -o-linear-gradient(right , @stop 0%, @start 100%);
+	background-image: -moz-linear-gradient(right , @stop 0%, @start 100%);
+	background-image: -webkit-linear-gradient(right , @stop 0%, @start 100%);
+	background-image: -ms-linear-gradient(right , @stop 0%, @start 100%);
+	background-image: -webkit-gradient(
+		linear,
+		right top,
+		left top,
+		color-stop(0, @stop),
+		color-stop(0.3, @start)
+	);
+}
 .bw-gradient(@color: #F5F5F5, @start: 0, @stop: 255) {
   background: @color;
   background: -webkit-gradient(linear,
@@ -133,4 +148,22 @@
   -o-transform: translate(@x, @y);
   -ms-transform: translate(@x, @y);
   transform: translate(@x, @y);
+}
+
+//
+// Transition
+// Example
+// a{
+// 		background:#f00;
+// 		.transition(background-color,1s);
+// 		&:hover{
+// 			background:#00f;
+// 		}
+// }
+//
+.transition(@property: width,@delay: 200ms){
+	transition: @property @delay;
+	-moz-transition: @property @delay;
+	-webkit-transition: @property @delay;
+	-o-transition: @property @delay;
 }
