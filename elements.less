@@ -74,9 +74,9 @@
 .opacity(@opacity: 0.5) {
   @percent: @opacity * 100;
   /* IE 8 */
-  -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=(@{percentage}))";
+  -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=(@{percent}))";
   /* IE 5-7 */ 
-  filter: ~"alpha(opacity = (@{percentage}))";
+  filter: ~"alpha(opacity = (@{percent}))";
   /* Netscape */
   -moz-opacity: @opacity;
   /* Safari 1.x */
