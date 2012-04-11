@@ -39,7 +39,7 @@
 			right top,
 			left top,
 			color-stop(0, @stop),
-			color-stop(0.3, @start)
+			color-stop(0.5, @start)
 		);
 	}
 	.bw(@color: #F5F5F5, @start: 0, @stop: 255) {
@@ -91,15 +91,15 @@
 }
 
 #shadows{
-	.drop(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
-	  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
-	  -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
-	  box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+	.drop(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1, @color: #000) {
+	  -webkit-box-shadow: @x-axis @y-axis @blur fadeout(@color, 100-(@alpha*100));
+	  -moz-box-shadow: @x-axis @y-axis @blur fadeout(@color, 100-(@alpha*100));
+	  box-shadow: @x-axis @y-axis @blur fadeout(@color, 100-(@alpha*100));
 	}
-	.inner(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4) {
-	  -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
-	  -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
-	  box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+	.inner(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4, @color: #000) {
+	  -webkit-box-shadow: inset @horizontal @vertical @blur fadeout(@color, 100-(@alpha*100));
+	  -moz-box-shadow: inset @horizontal @vertical @blur fadeout(@color, 100-(@alpha*100));
+	  box-shadow: inset @horizontal @vertical @blur fadeout(@color, 100-(@alpha*100));
 	}
 	.box(@arguments) {
 	  -webkit-box-shadow: @arguments;
