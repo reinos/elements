@@ -26,6 +26,8 @@
 	  background: -moz-linear-gradient(center bottom,
 									   @start 0%,
 									   @stop 100%);
+	  background: -ms-linear-gradient(top, @start 0%,@stop 100%); 
+	  filter: ~"progid:DXImageTransform.Microsoft.gradient( startColorstr='@{stop}', endColorstr='@{start}',GradientType=0)";
 	}
 	.horizontal(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
 		background: @color;
@@ -41,6 +43,8 @@
 			color-stop(0, @stop),
 			color-stop(0.5, @start)
 		);
+		background: -ms-linear-gradient(left, @start 0%,@stop 100%); 
+	  filter: ~"progid:DXImageTransform.Microsoft.gradient( startColorstr='@{stop}', endColorstr='@{start}',GradientType=1)";
 	}
 	.bw(@color: #F5F5F5, @start: 0, @stop: 255) {
 	  background: @color;
