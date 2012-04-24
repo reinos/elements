@@ -13,20 +13,17 @@
 -----------------------------------------------------*/
 
 #gradients{
-	.vertical(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+	.vertical(@color: #F5F5F5, @start: #EEE, @stop: #FFF, @posStart: 0, @posEnd: 1) {
 	  background: @color;
 	  background: -webkit-gradient(linear,
 								   left bottom,
 								   left top,
-								   color-stop(0, @start),
-								   color-stop(1, @stop));
-	  background: -ms-linear-gradient(bottom,
-									  @start,
-									  @stop);
+								   color-stop(@posStart, @start),
+								   color-stop(@posEnd, @stop));
 	  background: -moz-linear-gradient(center bottom,
-									   @start 0%,
-									   @stop 100%);
-	  background: -ms-linear-gradient(top, @start 0%,@stop 100%); 
+									   @start @posStart*100%,
+									   @stop @posEnd*100%);
+	  background: -ms-linear-gradient(bottom, @start @posStart*100%,@stop @posEnd*100%); 
 	  filter: ~"progid:DXImageTransform.Microsoft.gradient( startColorstr='@{stop}', endColorstr='@{start}',GradientType=0)";
 	}
 	.horizontal(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
@@ -59,6 +56,10 @@
 	  background: -moz-linear-gradient(center bottom,
 									   rgb(@start,@start,@start) 0%,
 									   rgb(@stop,@stop,@stop) 100%);
+	}
+	.none{
+		background:none;
+		filter:none;
 	}
 
 }
