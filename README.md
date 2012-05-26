@@ -29,8 +29,13 @@ Looks just line shorthand CSS, with the values representing top right, bottom ri
 Currently LESS Elements includes following namespaces:
 
 [Gradients](https://github.com/Oreolek/elements/wiki/Gradients)
+
 [Borders](https://github.com/Oreolek/elements/wiki/Borders)
+
 [Shadows](https://github.com/Oreolek/elements/wiki/Shadows)
+
 [Transformations](https://github.com/Oreolek/elements/wiki/Transformations)
+
 [Transitions](https://github.com/Oreolek/elements/wiki/Transitions)
+
 [Layout](https://github.com/Oreolek/elements/wiki/Layout)
