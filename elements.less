@@ -101,6 +101,11 @@
     -moz-box-shadow: inset @horizontal @vertical @blur fadeout(@color, 100-(@alpha*100));
     box-shadow: inset @horizontal @vertical @blur fadeout(@color, 100-(@alpha*100));
   }
+  .both(@horizontalOut:0, @verticalOut:1px, @blurOut:2px, @alphaOut: 0.4, @colorOut: #000,@horizontalIn:0, @verticalIn:1px, @blurIn:2px, @alphaIn: 0.4, @colorIn: #000) {
+    -webkit-box-shadow: @horizontalOut @verticalOut @blurOut fadeout(@colorOut, 100-(@alphaOut*100)), inset @horizontalIn @verticalIn @blurIn fadeout(@colorIn, 100-(@alphaIn*100));
+    -moz-box-shadow: @horizontalOut @verticalOut @blurOut fadeout(@colorOut, 100-(@alphaOut*100)), inset @horizontalIn @verticalIn @blurIn fadeout(@colorIn, 100-(@alphaIn*100));
+    box-shadow: @horizontalOut @verticalOut @blurOut fadeout(@colorOut, 100-(@alphaOut*100)), inset @horizontalIn @verticalIn @blurIn fadeout(@colorIn, 100-(@alphaIn*100));
+  }
   .box(@arguments) {
     -webkit-box-shadow: @arguments;
     -moz-box-shadow: @arguments;
