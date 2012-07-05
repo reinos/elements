@@ -7,7 +7,7 @@
     More info at: http://lesselements.com
 -----------------------------------------------------*/
 
-#gradients{
+#gradient {
   .vertical(@color: #F5F5F5, @start: #EEE, @stop: #FFF, @posStart: 0, @posEnd: 1) {
     background: @color;
     background: -webkit-gradient(linear,
@@ -59,7 +59,7 @@
 
 }
 
-#borders{
+#border {
   .bordered(@top-color: #EEE, @right-color: #EEE, @bottom-color: #EEE, @left-color: #EEE) {
     border-top: solid 1px @top-color;
     border-left: solid 1px @left-color;
@@ -72,7 +72,7 @@
     border-radius: @radius;
     -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
   }
-  
+
   .radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
     -webkit-border-top-right-radius: @topright;
     -webkit-border-bottom-right-radius: @bottomright;
@@ -90,7 +90,7 @@
   }
 }
 
-#shadows{
+#shadow {
   .drop(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1, @color: #000) {
     -webkit-box-shadow: @x-axis @y-axis @blur fadeout(@color, 100-(@alpha*100));
     -moz-box-shadow: @x-axis @y-axis @blur fadeout(@color, 100-(@alpha*100));
@@ -121,7 +121,7 @@
  }
 }
 
-#transform{
+#transform {
   .rotation(@deg:5deg){
     -webkit-transform: rotate(@deg);
     -moz-transform: rotate(@deg);
@@ -157,7 +157,7 @@
   }
 }
 
-#transition{
+#transition {
   .all(@duration:0.2s, @ease:ease-out) {
     -webkit-transition: all @duration @ease;
     -moz-transition: all @duration @ease;
@@ -176,7 +176,7 @@
   }
 }
 
-#content{
+#content {
   .columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px) {
     -moz-column-width: @colwidth;
     -moz-column-count: @colcount;
