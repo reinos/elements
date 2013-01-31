@@ -215,3 +215,25 @@
     column-rule-width: @columnRuleWidth;
   }
 }
+
+/* Box model */
+.boxmodel(@box-sizing: border-box) {
+  -webkit-box-sizing: @box-sizing;
+  -moz-box-sizing: @box-sizing;
+  -o-box-sizing: @box-sizing;
+  box-sizing: @box-sizing;
+}
+
+.clearfix {
+  *zoom: 1;
+   
+  &:after,
+  &:before {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+  
+  &:after {
+    clear: both;
+  }
+}
